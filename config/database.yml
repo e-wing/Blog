@@ -6,16 +6,16 @@ default: &default
 development:
   <<: *default
   database: blog_development
-  username: octopus
-  password: octopus
+  username: blog
+  password: blog
   host: localhost
   port: 5432
 
 test:
   <<: *default
   database: blog_test
-  username: octopus
-  password: octopus
+  username: blog
+  password: blog
   host: localhost
   port: 5432
 

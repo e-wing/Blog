@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create!(first_name: 'DevFirst', last_name: 'DevLast', email: 'dev@myblog.com', password: 'secretpassword123', time_zone: "Pacific Time (US & Canada)",
-     confirmed_at: Time.now, gender: 'female', editor_user_id: 1, level: 'maker', accept_terms: true)
+     confirmed_at: Time.now, gender: 'female',   accept_terms: true)
