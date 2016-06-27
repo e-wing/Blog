@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 27
+
+development:
+  <<: *default
+  database: blog_development
+  username: octopus
+  password: octopus
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: blog_test
+  username: octopus
+  password: octopus
+  host: localhost
+  port: 5432
+

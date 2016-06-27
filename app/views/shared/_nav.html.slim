@@ -1,0 +1,38 @@
+nav.navbar.navbar-default style="height: 100px; background: transparent"
+  .container
+    /! Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="#"  
+      
+
+
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      
+        ul.nav.navbar-nav.navbar-right style="font-size: 18px; margin-top: 20px"
+          
+            
+          / li
+          /   = link_to blog_articles_path
+          /     |BLOG
+            
+          - if !user_signed_in? 
+            li
+              = link_to new_user_registration_path
+                |Sign Up
+            li
+              = link_to new_user_session_path
+                |Sign In
+          - else
+            li
+              = link_to insides_path, class: 'text-success'
+                |Your Stuff
+            li
+              = link_to destroy_user_session_path, method: 'delete'
+                |Sign Out
+            
